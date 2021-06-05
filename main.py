@@ -8,7 +8,7 @@ load_dotenv()
 tool = language_tool_python.LanguageTool('en-US')
 
 
-class Grammar_Police(commands.Bot):
+class GrammarPolice(commands.Bot):
     async def on_ready(self):
         print(f'{self.user.name} has connected to Discord!')
 
@@ -27,7 +27,7 @@ class Grammar_Police(commands.Bot):
         await self.process_commands(message)
 
 
-bot = Grammar_Police(
+bot = GrammarPolice(
     command_prefix=commands.when_mentioned_or(','),
     help_command=None,
     intents=discord.Intents.all()
